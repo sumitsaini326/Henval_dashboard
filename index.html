@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f6f8fc" />
+    <meta
+      name="description"
+      content="Henval Dashboard — a clear view of your business performance."
+    />
+    <title>Overview · Henval Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <a class="brand" href="#overview" aria-label="Henval Dashboard home">
+          <span class="brand-mark" aria-hidden="true">H</span>
+          <span>henval<span class="brand-light">.</span></span>
+        </a>
+
+        <p class="nav-label">WORKSPACE</p>
+        <nav class="primary-nav" aria-label="Main navigation">
+          <a class="nav-link active" href="#overview" aria-current="page">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="8" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="15" width="7" height="6" rx="1.5"/></svg>
+            Overview
+          </a>
+          <a class="nav-link" href="#analytics">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5M4 19h17"/><path d="m7 15 4-4 3 2 6-7"/></svg>
+            Analytics
+          </a>
+          <a class="nav-link" href="#transactions">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="15" rx="2"/><path d="M7 9h10M7 13h6M7 17h3M7 3v4M17 3v4"/></svg>
+            Transactions
+          </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <div class="help-card">
+            <span class="help-icon" aria-hidden="true">✦</span>
+            <strong>Need a hand?</strong>
+            <span>We're here to help you make sense of your numbers.</span>
+            <a href="mailto:support@henval.example">Contact support <span aria-hidden="true">↗</span></a>
+          </div>
+          <button class="profile-button" type="button" aria-label="Signed in as Sumit Saini">
+            <span class="avatar">SS</span>
+            <span class="profile-copy"><strong>Sumit Saini</strong><small>Administrator</small></span>
+            <span class="profile-more" aria-hidden="true">···</span>
+          </button>
+        </div>
+      </aside>
+
+      <main class="main-content" id="overview">
+        <header class="topbar">
+          <button class="menu-toggle icon-button" type="button" aria-label="Toggle navigation" aria-expanded="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+          <div class="breadcrumbs"><span>Workspace</span><span aria-hidden="true">/</span><strong>Overview</strong></div>
+          <div class="topbar-actions">
+            <span class="today-label"><span class="status-dot"></span> All systems operational</span>
+            <button class="icon-button theme-toggle" type="button" aria-label="Toggle dark theme" title="Toggle dark theme">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 15.5A8.5 8.5 0 0 1 8.5 3.5a8.5 8.5 0 1 0 12 12Z"/></svg>
+            </button>
+            <button class="avatar top-avatar" type="button" aria-label="Sumit Saini account">SS</button>
+          </div>
+        </header>
+
+        <div class="page-content">
+          <section class="welcome-row" aria-labelledby="page-title">
+            <div>
+              <p class="eyebrow" id="current-date"></p>
+              <h1 id="page-title">Good morning, Sumit <span aria-hidden="true">✦</span></h1>
+              <p class="page-subtitle">Here's what's happening with your business today.</p>
+            </div>
+            <button class="button button-primary" id="export-button" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5"/><path d="M5 16v4h14v-4"/></svg>
+              Export report
+            </button>
+          </section>
+
+          <section class="metrics-grid" aria-label="Business metrics">
+            <article class="metric-card">
+              <div class="metric-heading"><span>Total revenue</span><span class="metric-icon purple">↗</span></div>
+              <div class="metric-value" data-metric="revenue">$48,294</div>
+              <div class="metric-foot"><span class="change positive">↑ 12.8%</span><span>vs. previous period</span></div>
+              <div class="sparkline spark-purple" aria-hidden="true"><svg viewBox="0 0 120 34"><path d="M1 28 15 23 27 25 41 15 55 20 68 11 81 16 96 5 108 10 119 3"/></svg></div>
+            </article>
+            <article class="metric-card">
+              <div class="metric-heading"><span>Orders</span><span class="metric-icon green">▤</span></div>
+              <div class="metric-value" data-metric="orders">1,248</div>
+              <div class="metric-foot"><span class="change positive">↑ 8.2%</span><span>vs. previous period</span></div>
+              <div class="sparkline spark-green" aria-hidden="true"><svg viewBox="0 0 120 34"><path d="M1 25 14 21 28 24 41 13 54 18 68 9 82 14 96 6 109 11 119 4"/></svg></div>
+            </article>
+            <article class="metric-card">
+              <div class="metric-heading"><span>Avg. order value</span><span class="metric-icon orange">$</span></div>
+              <div class="metric-value" data-metric="average">$38.70</div>
+              <div class="metric-foot"><span class="change positive">↑ 3.1%</span><span>vs. previous period</span></div>
+              <div class="sparkline spark-orange" aria-hidden="true"><svg viewBox="0 0 120 34"><path d="M1 26 14 18 27 21 41 18 54 23 68 12 81 15 95 8 108 13 119 5"/></svg></div>
+            </article>
+            <article class="metric-card">
+              <div class="metric-heading"><span>Active customers</span><span class="metric-icon blue">♙</span></div>
+              <div class="metric-value" data-metric="customers">892</div>
+              <div class="metric-foot"><span class="change positive">↑ 5.4%</span><span>vs. previous period</span></div>
+              <div class="sparkline spark-blue" aria-hidden="true"><svg viewBox="0 0 120 34"><path d="M1 27 14 22 27 25 41 17 55 19 68 12 81 15 95 9 108 12 119 3"/></svg></div>
+            </article>
+          </section>
+
+          <section class="charts-grid" id="analytics" aria-label="Analytics">
+            <article class="panel revenue-panel">
+              <div class="panel-heading">
+                <div><h2>Revenue overview</h2><p>Track your revenue performance over time</p></div>
+                <label class="select-wrap">
+                  <span class="sr-only">Revenue time range</span>
+                  <select id="period-select">
+                    <option value="week">This week</option>
+                    <option value="month" selected>This month</option>
+                    <option value="year">This year</option>
+                  </select>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg>
+                </label>
+              </div>
+              <div class="chart-summary"><strong id="chart-total">$48,294</strong><span class="change positive">↑ 12.8%</span><span class="chart-summary-note">compared to previous period</span></div>
+              <div class="chart-container"><svg id="revenue-chart" viewBox="0 0 760 250" role="img" aria-label="Revenue chart for this month"></svg></div>
+            </article>
+
+            <article class="panel source-panel">
+              <div class="panel-heading">
+                <div><h2>Sales by channel</h2><p>Where your orders come from</p></div>
+                <button class="icon-button more-button" type="button" aria-label="More sales channel options">···</button>
+              </div>
+              <div class="donut-wrap">
+                <div class="donut-chart" role="img" aria-label="Sales channels: 48 percent website, 32 percent social, 20 percent referral">
+                  <div class="donut-center"><strong>1,248</strong><span>Total orders</span></div>
+                </div>
+              </div>
+              <div class="legend">
+                <div><span><i class="legend-dot dot-purple"></i>Website</span><strong>48%</strong></div>
+                <div><span><i class="legend-dot dot-blue"></i>Social media</span><strong>32%</strong></div>
+                <div><span><i class="legend-dot dot-orange"></i>Referral</span><strong>20%</strong></div>
+              </div>
+            </article>
+          </section>
+
+          <section class="panel transactions-panel" id="transactions">
+            <div class="panel-heading transactions-heading">
+              <div><h2>Recent transactions</h2><p>A snapshot of your latest orders</p></div>
+              <div class="table-actions">
+                <label class="search-box">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16 16 4 4"/></svg>
+                  <span class="sr-only">Search transactions</span>
+                  <input id="transaction-search" type="search" placeholder="Search orders..." autocomplete="off" />
+                </label>
+                <a class="view-all" href="#transactions">View all <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+            <div class="table-scroll">
+              <table>
+                <thead><tr><th scope="col">ORDER</th><th scope="col">CUSTOMER</th><th scope="col">DATE</th><th scope="col">AMOUNT</th><th scope="col">STATUS</th></tr></thead>
+                <tbody id="transaction-rows">
+                  <tr data-search="olivia martin olivia@example.com hv-2841">
+                    <td class="order-id">#HV-2841</td><td><span class="customer-cell"><span class="customer-avatar avatar-lilac">OM</span><span><strong>Olivia Martin</strong><small>olivia@example.com</small></span></span></td><td>Oct 23, 2026</td><td class="amount">$284.00</td><td><span class="badge badge-paid"><i></i>Paid</span></td>
+                  </tr>
+                  <tr data-search="phoenix baker phoenix@example.com hv-2840">
+                    <td class="order-id">#HV-2840</td><td><span class="customer-cell"><span class="customer-avatar avatar-peach">PB</span><span><strong>Phoenix Baker</strong><small>phoenix@example.com</small></span></span></td><td>Oct 22, 2026</td><td class="amount">$128.50</td><td><span class="badge badge-pending"><i></i>Pending</span></td>
+                  </tr>
+                  <tr data-search="lana steiner lana@example.com hv-2839">
+                    <td class="order-id">#HV-2839</td><td><span class="customer-cell"><span class="customer-avatar avatar-mint">LS</span><span><strong>Lana Steiner</strong><small>lana@example.com</small></span></span></td><td>Oct 22, 2026</td><td class="amount">$96.00</td><td><span class="badge badge-paid"><i></i>Paid</span></td>
+                  </tr>
+                  <tr data-search="demi wilkinson demi@example.com hv-2838">
+                    <td class="order-id">#HV-2838</td><td><span class="customer-cell"><span class="customer-avatar avatar-blue">DW</span><span><strong>Demi Wilkinson</strong><small>demi@example.com</small></span></span></td><td>Oct 21, 2026</td><td class="amount">$345.20</td><td><span class="badge badge-refunded"><i></i>Refunded</span></td>
+                  </tr>
+                  <tr data-search="candice wu candice@example.com hv-2837">
+                    <td class="order-id">#HV-2837</td><td><span class="customer-cell"><span class="customer-avatar avatar-yellow">CW</span><span><strong>Candice Wu</strong><small>candice@example.com</small></span></span></td><td>Oct 20, 2026</td><td class="amount">$72.00</td><td><span class="badge badge-paid"><i></i>Paid</span></td>
+                  </tr>
+                </tbody>
+              </table>
+              <p class="empty-state" id="empty-state" hidden>No transactions match your search.</p>
+            </div>
+            <div class="table-footer"><span id="result-count">Showing 5 of 1,248 transactions</span><button type="button" class="pagination-button" disabled>1–5 <span aria-hidden="true">⌄</span></button></div>
+          </section>
+          <footer class="page-footer"><span>© 2026 Henval Dashboard</span><span>Sample data · Last updated just now</span></footer>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
